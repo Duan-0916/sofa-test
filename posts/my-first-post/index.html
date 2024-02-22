@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60977&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Layooto | Layotto</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="查看中文版本
+Layotto(/leɪˈɒtəʊ/) is an application runtime developed using Golang, which provides various distributed capabilities for applications, such as state management, configuration management, and event pub/sub capabilities to simplify application development.
+Layotto is built on the open source data plane MOSN .In addition to providing distributed building blocks, Layotto can also serve as the data plane of Service Mesh and has the ability to control traffic.
+Motivation Layotto aims to combine Multi-Runtime with Service Mesh into one sidecar.">
+    <meta name="generator" content="Hugo 0.123.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:60977/posts/my-first-post/">
+    
+
+    <meta property="og:title" content="Layooto" />
+<meta property="og:description" content="查看中文版本
+Layotto(/leɪˈɒtəʊ/) is an application runtime developed using Golang, which provides various distributed capabilities for applications, such as state management, configuration management, and event pub/sub capabilities to simplify application development.
+Layotto is built on the open source data plane MOSN .In addition to providing distributed building blocks, Layotto can also serve as the data plane of Service Mesh and has the ability to control traffic.
+Motivation Layotto aims to combine Multi-Runtime with Service Mesh into one sidecar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:60977/posts/my-first-post/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-22T15:51:42+08:00" />
+<meta property="article:modified_time" content="2024-02-22T15:51:42+08:00" />
+
+<meta itemprop="name" content="Layooto">
+<meta itemprop="description" content="查看中文版本
+Layotto(/leɪˈɒtəʊ/) is an application runtime developed using Golang, which provides various distributed capabilities for applications, such as state management, configuration management, and event pub/sub capabilities to simplify application development.
+Layotto is built on the open source data plane MOSN .In addition to providing distributed building blocks, Layotto can also serve as the data plane of Service Mesh and has the ability to control traffic.
+Motivation Layotto aims to combine Multi-Runtime with Service Mesh into one sidecar."><meta itemprop="datePublished" content="2024-02-22T15:51:42+08:00" />
+<meta itemprop="dateModified" content="2024-02-22T15:51:42+08:00" />
+<meta itemprop="wordCount" content="826">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Layooto"/>
+<meta name="twitter:description" content="查看中文版本
+Layotto(/leɪˈɒtəʊ/) is an application runtime developed using Golang, which provides various distributed capabilities for applications, such as state management, configuration management, and event pub/sub capabilities to simplify application development.
+Layotto is built on the open source data plane MOSN .In addition to providing distributed building blocks, Layotto can also serve as the data plane of Service Mesh and has the ability to control traffic.
+Motivation Layotto aims to combine Multi-Runtime with Service Mesh into one sidecar."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Layotto
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Layooto</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-02-22T15:51:42+08:00">February 22, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<p><a href="https://github.com/mosn/layotto/actions/workflows/quickstart-checker.yml"><img src="https://github.com/mosn/layotto/actions/workflows/quickstart-checker.yml/badge.svg" alt="Layotto Env Pipeline 🌊"></a>
+<a href="https://github.com/mosn/layotto/actions/workflows/layotto-ci.yml"><img src="https://github.com/mosn/layotto/actions/workflows/layotto-ci.yml/badge.svg" alt="Layotto Dev Pipeline 🌊"></a></p>
+<p><a href="https://godoc.org/mosn.io/layotto"><img src="https://godoc.org/mosn.io/layotto?status.svg" alt="GoDoc"></a>
+<a href="https://goreportcard.com/report/mosn.io/layotto"><img src="https://goreportcard.com/badge/github.com/mosn/layotto" alt="Go Report Card"></a>
+<a href="https://codecov.io/gh/mosn/layotto"><img src="https://codecov.io/gh/mosn/layotto/branch/main/graph/badge.svg?token=10RxwSV6Sz" alt="codecov"></a>
+<a href="http://isitmaintained.com/project/mosn/layotto" title="Average time to resolve an issue"><img src="http://isitmaintained.com/badge/resolution/mosn/layotto.svg" alt="Average time to resolve an issue"></a></p>
+<!-- raw HTML omitted -->
+<p><a href="https://mosn.io/layotto/#/zh/README">查看中文版本</a></p>
+<p>Layotto(/leɪˈɒtəʊ/) is an application runtime developed using Golang, which provides various distributed capabilities for applications, such as state management, configuration management, and event pub/sub capabilities to simplify application development.</p>
+<p>Layotto is built on the open source data plane <a href="https://github.com/mosn/mosn">MOSN</a> .In addition to providing distributed building blocks, Layotto can also serve as the data plane of Service Mesh and has the ability to control traffic.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Layotto aims to combine <a href="https://www.infoq.com/articles/multi-runtime-microservice-architecture/">Multi-Runtime</a> with Service Mesh into one sidecar. No matter which product you are using as the Service Mesh data plane (e.g. MOSN,Envoy or any other product), you can always attach Layotto to it and add Multi-Runtime capabilities without adding new sidecars.</p>
+<p>For example, by adding Runtime capabilities to MOSN, a Layotto process can both <a href="https://mosn.io/layotto/#/en/start/istio/">serve as the data plane of istio</a> and provide various Runtime APIs (such as Configuration API, Pub/Sub API, etc.)</p>
+<p>In addition, we were surprised to find that a sidecar can do much more than that. We are trying to make Layotto even the runtime container of FaaS (Function as a service) with the magic power of <a href="https://en.wikipedia.org/wiki/WebAssembly">WebAssembly</a> .</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Service Communication</li>
+<li>Service Governance.Such as traffic hijacking and observation, service rate limiting, etc</li>
+<li><a href="https://mosn.io/layotto/#/en/start/istio/">As the data plane of istio</a></li>
+<li>Configuration management</li>
+<li>State management</li>
+<li>Event publish and subscribe</li>
+<li>Health check, query runtime metadata</li>
+<li><a href="https://mosn.io/layotto/#/en/start/faas/start.md">FaaS model based on WASM and Runtime</a></li>
+</ul>
+<h2 id="project-architecture">Project Architecture</h2>
+<p>As shown in the architecture diagram below, Layotto uses the open source MOSN as the base to provide network layer management capabilities while providing distributed capabilities. The business logic can directly interact with Layotto through a lightweight SDK without paying attention to the specific back-end infrastructure.</p>
+<p>Layotto provides SDKs in various languages. The sdk interacts with Layotto through grpc. Application developers only need to specify their own infrastructure type through the configuration file <a href="./configs/runtime_config.json">configure file</a> provided by Layotto. No coding changes are required, which greatly improves the portability of the program.</p>
+<p><img src="https://raw.githubusercontent.com/mosn/layotto/main/docs/img/runtime-architecture.png" alt="Architecture"></p>
+<h2 id="quickstarts">Quickstarts</h2>
+<h3 id="get-started-with-layotto">Get started with Layotto</h3>
+<p>You can try the quickstart demos below to get started with Layotto. In addition, you can experience the <a href="https://mosn.io/layotto/#/en/start/lab">online laboratory</a></p>
+<h3 id="api">API</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/state/start">demo</a></td>
+<td>Write/Query the data of the Key/Value model</td>
+</tr>
+<tr>
+<td>Pub/Sub</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/pubsub/start">demo</a></td>
+<td>Publish/Subscribe message through various Message Queue</td>
+</tr>
+<tr>
+<td>Service Invoke</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/rpc/helloworld">demo</a></td>
+<td>Call Service through MOSN (another istio data plane)</td>
+</tr>
+<tr>
+<td>Config</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/configuration/start-apollo">demo</a></td>
+<td>Write/Query/Subscribe the config through various Config Center</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/lock/start">demo</a></td>
+<td>Distributed lock API</td>
+</tr>
+<tr>
+<td>Sequencer</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/sequencer/start">demo</a></td>
+<td>Generate distributed unique and incremental ID</td>
+</tr>
+<tr>
+<td>File</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TODO</td>
+<td>File API implementation</td>
+</tr>
+<tr>
+<td>Binding</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TODO</td>
+<td>Transparent data transmission API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-mesh">Service Mesh</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>istio</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/istio/">demo</a></td>
+<td>As the data plane of istio</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extendability">Extendability</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API plugin</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/api_plugin/helloworld">demo</a></td>
+<td>You can add your own API !</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actuator">Actuator</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Health Check</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/actuator/start">demo</a></td>
+<td>Query health state of app and components in Layotto</td>
+</tr>
+<tr>
+<td>Metadata Query</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/actuator/start">demo</a></td>
+<td>Query metadata in Layotto/app</td>
+</tr>
+</tbody>
+</table>
+<h3 id="traffic-control">Traffic Control</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP Copy</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/network_filter/tcpcopy">demo</a></td>
+<td>Dump the tcp traffic received by Layotto into local file system</td>
+</tr>
+<tr>
+<td>Flow Control</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/stream_filter/flow_control">demo</a></td>
+<td>limit access to the APIs provided by Layotto</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-your-bussiness-logic-using-wasm">Write your bussiness logic using WASM</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Go (TinyGo)</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/wasm/start">demo</a></td>
+<td>Compile Code written by TinyGo to *.wasm and run in Layotto</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/wasm/start">demo</a></td>
+<td>Compile Code written by Rust to *.wasm and run in Layotto</td>
+</tr>
+<tr>
+<td>AssemblyScript</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/wasm/start">demo</a></td>
+<td>Compile Code written by AssemblyScript to *.wasm and run in Layotto</td>
+</tr>
+</tbody>
+</table>
+<h3 id="as-a-faasserverless-runtime-layotto--webassembly--k8s">As a FaaS(Serverless) runtime (Layotto + WebAssembly + k8s)</h3>
+<table>
+<thead>
+<tr>
+<th>feature</th>
+<th style="text-align:center">status</th>
+<th style="text-align:center">quick start</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Go (TinyGo)</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/faas/start">demo</a></td>
+<td>Compile Code written by TinyGo to *.wasm and run in Layotto And Scheduled by k8s.</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/faas/start">demo</a></td>
+<td>Compile Code written by Rust to *.wasm and run in Layotto And Scheduled by k8s.</td>
+</tr>
+<tr>
+<td>AssemblyScript</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"><a href="https://mosn.io/layotto/#/en/start/faas/start">demo</a></td>
+<td>Compile Code written by AssemblyScript to *.wasm and run in Layotto And Scheduled by k8s.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="presentations">Presentations</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=5v8gTrFUDk8">Layotto - A new chapter of Service Mesh and Application Runtime</a></li>
+<li><a href="https://www.youtube.com/watch?v=g01CJ4S9Qao">WebAssembly + Application Runtime = A New Era of FaaS?</a></li>
+</ul>
+<h2 id="landscapes">Landscapes</h2>
+<!-- raw HTML omitted -->
+<h2 id="community">Community</h2>
+<h3 id="contact-us">Contact Us</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Platform</th>
+<th style="text-align:left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">💬 <a href="https://www.dingtalk.com/en">DingTalk</a> (preferred)</td>
+<td style="text-align:left">Search the group number: 31912621 or scan the QR code below <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-contribute">How to contribute</h2>
+<p><a href="https://github.com/mosn/layotto/issues/108">Where to start? Check &ldquo;Community tasks&rdquo; list!</a></p>
+<p>As a programming enthusiast , have you ever felt that you want to participate in the development of an open source project, but don&rsquo;t know where to start?
+In order to help everyone better participate in open source projects, our community will regularly publish community tasks to help everyone learn by doing!</p>
+<p><a href="docs/en/development/contributing-doc.md">Document Contribution Guide</a></p>
+<p><a href="docs/en/development/developing-component.md">Component Development Guide</a></p>
+<p><a href="docs/en/development/github-workflows.md">Layotto Github Workflows</a></p>
+<p><a href="docs/en/development/commands.md">Layotto Commands Guide</a></p>
+<p><a href="docs/en/development/CONTRIBUTING.md">Layotto Contributor Guide</a></p>
+<h2 id="contributors">Contributors</h2>
+<p>Thank y&rsquo;all!</p>
+<!-- raw HTML omitted -->
+<h2 id="design-documents">Design Documents</h2>
+<p><a href="docs/en/design/actuator/actuator-design-doc.md">Actuator Design Doc</a></p>
+<p><a href="docs/en/design/configuration/configuration-api-with-apollo.md">Configuration API with Apollo</a></p>
+<p><a href="docs/en/design/pubsub/pubsub-api-and-compability-with-dapr-component.md">Pubsub API and Compability with Dapr Component</a></p>
+<p><a href="docs/en/design/rpc/rpc-design-doc.md">RPC Design Doc</a></p>
+<p><a href="docs/en/design/lock/lock-api-design.md">Distributed Lock API Design</a></p>
+<p><a href="docs/en/design/faas/faas-poc-design.md">FaaS Design</a></p>
+<h2 id="faq">FAQ</h2>
+<h3 id="difference-with-dapr">Difference with dapr?</h3>
+<p>dapr is an excellent Runtime product, but it lacks the ability of Service Mesh, which is necessary for the Runtime
+product used in production environment, so we hope to combine Runtime with Service Mesh into one sidecar to meet
+more complex production requirements.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:60977/" >
+    &copy;  Layotto 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
